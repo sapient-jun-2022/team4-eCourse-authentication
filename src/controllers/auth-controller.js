@@ -23,14 +23,14 @@ export const signup = async (req, res) => {
 }
 
 export const getAllUsers = (req, res, next) => {
-    jwt.verify(req.token, privateKey, (err, data) => {
-        if (err) {
+    jwt.verify(req.token, privateKey, (error, data) => {
+        if (error) {
             res.sendStatus(403);
         } else {
             console.log(data);
-            User.find({}, (Err, user) => {
-                if (Err) {
-                    res.send(Err);
+            User.find({}, (err, user) => {
+                if (err) {
+                    res.send(err);
                 } else {
                     res.json(user);
                 }
