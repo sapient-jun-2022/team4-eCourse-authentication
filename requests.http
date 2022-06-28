@@ -5,12 +5,22 @@ POST http://localhost:3000/user HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName" :"Latha", 
-    "lastName" :"Varakala", 
-    "email" :"latha@gmail.com", 
+    "firstName" :"Madhulatha1", 
+    "lastName" :"Narayana1", 
+    "email" :"latha_n1@gmail.com", 
     "mobileNo" :5566778899,
-    "password" :"latha@123"
+    "password" :"lathan1@123"
 }
 
 ###
 GET http://localhost:3000/user HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhdGhhX25AZ21haWwuY29tIiwicGFzc3dvcmQiOiJsYXRoYW5AMTIzIiwiaWF0IjoxNjU2MzMzMjM0fQ.kCW6DgAOcccVTWDTEIFixXgkQHT2ts1lixSv_djzspQ
+
+###
+POST http://localhost:3000/auth HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "latha_n@gmail.com",
+    "password": "lathan@123"
+}
