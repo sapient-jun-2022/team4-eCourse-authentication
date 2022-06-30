@@ -22,6 +22,7 @@ export const signup = async (req, res) => {
     })
 }
 
+//To get all users
 export const getAllUsers = (req, res, next) => {
     jwt.verify(req.token, privateKey, (error, data) => {
         if (error) {
